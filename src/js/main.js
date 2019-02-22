@@ -1,28 +1,24 @@
-// const uuidv1 = require('uuid/v1');
-// uuidv1();
+var newId = require("uuid-pure").newId;
 
-// to generaten UUID 
+const generateInterviewId = () => '#' + newId(13);
+ 
 inp = document.getElementById('unique-id');
-inp.value = 'xas';
+inp.value = generateInterviewId();
 
 // to show dropdown if Elsewhere is selected
-function yesnoCheck(that) {
-    if (that.value == "Elsewhere") {
-        alert("check");
-        document.getElementById("ifYes").style.display = "block";
-    } else {
-        document.getElementById("ifYes").style.display = "none";
-    }
-}
-// to show dropdown if Elsewhere is selected
-function yesnoCheck(that) {
-    if (that.value == "visa") {
-        alert("check");
-        document.getElementById("ifYes").style.color = "red";
-    } else {
-        document.getElementById("ifYes").style.color = "blue";
-    }
-}
-// to redirect after submit
-window.location.href = 'view.html';
+function myFunction_IP() {
+    var x = document.getElementById("mySelect").value;
+    document.getElementById("demo").innerHTML = "You selected: " + x;
+  }
+// // to show dropdown if visa is selected
+// function yesnoCheck(that) {
+//     if (that.value == "visa") {
+//         alert("check");
+//         document.getElementById("ifYes").style.color = "red";
+//     } else {
+//         document.getElementById("ifYes").style.color = "blue";
+//     }
+// }
+// // to redirect after submit
+// // window.location.href = 'view.html';
 
